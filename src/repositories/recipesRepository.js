@@ -4,10 +4,7 @@ let endpoint = "recipes/findByIngredients";
 
 export default {
     getRecipes(ingredient, amount) {
-        endpoint = `${endpoint}?ingredients=${ingredient}&number=${amount}`;
-        return Repository.request(endpoint, {});
+        let url = `${endpoint}?ingredients=${ingredient}&number=${amount}`;
+        return Repository.request(url, {});
     },
-    hola(){
-        console.log("hola");
-    }
 }

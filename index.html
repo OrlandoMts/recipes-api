@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
     rel="stylesheet" />
+  <link  rel="icon" href="./src/spoonacular-logo-b.svg" type="image/png" />
 </head>
 
 <body>
@@ -18,22 +19,27 @@
     <header class="header" id="header">
       <h1 class="header-title">Recipes</h1>
     </header>
+    
     <section class="content">
       <div class="content--ingredients">
         <form action="">
-          <h2>Selecciona una opcion</h2>
+          <h2>Chosse an option</h2>
           <div class="ingredients--form">
             <div class="ingredients--form-item">
               <input class="ingredients--form-label" type="radio" id="apple" name="drone" value="apple" checked>
               <label for="apple">Apple</label>
             </div>
             <div class="ingredients--form-item">
+              <input class="ingredients--form-label" type="radio" id="chicken" name="drone" value="chicken">
+              <label for="chicken">Chicken</label>
+            </div>
+            <div class="ingredients--form-item">
               <input class="ingredients--form-label" type="radio" id="pineapple" name="drone" value="pineapple">
               <label for="pineapple">Pineapple</label>
             </div>
             <div class="ingredients--form-item">
-              <input class="ingredients--form-label" type="radio" id="ingredient" name="drone" value="ingredient">
-              <label for="ingredient">Ingredient</label>
+              <input class="ingredients--form-label" type="radio" id="rice" name="drone" value="rice">
+              <label for="rice">Rice</label>
             </div>
             <div>
               <button class="btnCA" type="button" id="btnBuscar">Buscar</button>
@@ -41,12 +47,12 @@
 
           </div>
         </form>
-      </div>
+     </div>
 
-      <div id="resultRecipe" class="content--recipes">
-        <!-- <p id="resultRecipe"></p> -->
-      </div>
+     <div id="resultRecipe" class="content--recipes"></div>
     </section>
+  
+  </main>
     <script type="module" src="./src/index.js"></script>
 </body>
 

@@ -15,13 +15,13 @@ function verify() {
 const recipes = async () => {
     // Obtener el valor de verify y pasarselo a la funcion getRecipes
     try {
-        const response = await recipesRepository.getRecipes(verify(),4);
+        const response = await recipesRepository.getRecipes(verify(),5);
         const data = await response.json();
 
         const recipes = data.map(function(recipe) {
             return recipe;
         });
-
+        resultRecipes.innerHTML = "";
         show(recipes);
 
     } catch (error) {
@@ -29,17 +29,16 @@ const recipes = async () => {
     }
 }
 
-// const show = (recipes) => {
-//     const div = document.createElement('div')
-//     for (let i = 1; i < recipes.length; i++) {
-//         div.textContent = recipes[i].title;
-//         resultRecipes.appendChild(div);
-//     }
-// }
-
 const show = (recipes) => {
-    return recipes.forEach(recipe => {
-        resultRecipes.textContent += `Receta: ${recipe.title}`;
+    recipes.forEach(recipe => {
+        resultRecipes.innerHTML += `
+        <div class="content--recipes-card">
+            <img class="item-img" src="${recipe.image}" alt="">
+            <div>
+                <p class="item-title"> Recipe: ${recipe.title} </p>
+                <p class="item-title"> Desc: ${recipe.missedIngredients[0].original} </p>
+            </div>
+        </div>`;
     });
 }
 

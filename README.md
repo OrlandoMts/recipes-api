@@ -1,4 +1,4 @@
 # Recipes Api
 =============
 
-Check the app -> [Recipes](http://https://orlandomts.github.io/recipes-api/ "Recipes")
+Check the app -> [Recipes](https://orlandomts.github.io/recipes-api/ "Recipes")
